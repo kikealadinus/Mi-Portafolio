@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: rgb(67, 63, 63);
-    user-select: none;
+    /* user-select: none; */
 }
 
 /* Barra de Navegación */
