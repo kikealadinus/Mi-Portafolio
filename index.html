@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Personal</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/css/formulario.css">
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/fontawesome-free/css/all.min.css">
+    <!-- Para un favicon en formato .png -->
+    <link rel="icon" href="/img/favicon1.png" type="image/png">
+
+</head>
+
+<body>
+    <!-- Barra de Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Mi Portafolio</h1>
+                <ul class="nav-links">
+                    <li><a href="#portada">Inicio</a></li>
+                    <li><a href="#indice">Índice</a></li>
+                    <li><a href="#autobiografia">Autobiografía</a></li>
+                    <li><a href="#resumen">Resumen</a></li>
+                    <li><a href="#curriculo">Currículum Vitae</a></li>
+                    <li><a href="#evidencias">Evidencias</a></li>
+                    <li><a href="#certificados">Certificados</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Portada con el formulario de contacto -->
+    <section id="portada" class="portada-carousel">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Cada slide -->
+                <div class="swiper-slide" style="background-image: url('/img/imagen-5.png');">
+                    <div class="slide-content">
+                        <h2>¡Bienvenido a Mi Portafolio!</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url('/img/5.png');">
+                    <div class="slide-content">
+                        <h2>¡Gracias por visitarme!</h2>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url('/img/imagen-6.png');">
+                    <div class="slide-content">
+                        <h2>¡Bienvenido a Mi Portafolio!</h2>
+                        <a href="javascript:void(0);" class="btn contact-toggle">Contáctame</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url('/img/ai-generated.jpg');">
+                    <div class="slide-content">
+                        <h2>¡Bienvenido a Mi Portafolio!</h2>
+                        <p>Explora mi trayectoria, proyectos y logros.</p>
+                        <a href="javascript:void(0);" class="btn contact-toggle">Contáctame</a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url('/img/software-developer.jpg');">
+                    <div class="slide-content">
+                        <h2>Descubre Mis Proyectos</h2>
+                        <p>Un vistazo a las soluciones que he desarrollado.</p>
+                        <a href="#resumen" class="btn">Ver Proyectos</a>
+                    </div>
+                </div>                
+                <div class="swiper-slide" style="background-image: url('/img/website.jpg');">
+                    <div class="slide-content">
+                        <h2>Hablemos de Oportunidades</h2>
+                        <p>Estoy listo para nuevos retos. ¡Hablemos!</p>
+                        <a href="javascript:void(0);" class="btn contact-toggle">Contáctame</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario de Contacto Emergente -->
+        <div id="contact-form-popup" class="contact-form-popup">
+            <div class="form-popup-content">
+                <h3>Contáctame</h3>
+                <form id="contact-form" class="contact-form" action="/send_email.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" placeholder="El motivo del contacto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    <p id="form-status" class="form-status"></p>
+                    <button type="button" class="close-btn" id="contact-close"><i class="fas fa-times"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenedor Principal -->
+    <main>
+        <!-- ÍNDICE -->
+        <section id="indice" class="section">
+            <h2 class="section-title">Índice</h2>
+            <p class="section-description">Explora las secciones de mi portafolio.</p>
+            <div class="indice-list">
+                <ul>
+                    <li><a href="#autobiografia">Autobiografía</a></li>
+                    <li><a href="#resumen">Resumen</a></li>
+                    <li><a href="#curriculo">Currículum Vitae</a></li>
+                    <li><a href="#evidencias">Evidencias Académicas</a></li>
+                    <li><a href="#certificados">Certificados</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- OTRAS SECCIONES (Placeholder para ahora) -->
+        <section id="autobiografia" class="section">
+            <div class="autobiografia-header">
+                <img src="/img/img-0.jpg" alt="Foto de perfil" class="profile-photo">
+                <h2 class="section-title animate-on-scroll">Autobiografía</h2>
+            </div>           
+            <p class="section-description animate-on-scroll">Conoce más sobre mi historia y trayectoria.</p>
+            <div class="autobiografia-content animate-on-scroll">
+                <p class="autobiografia-text">
+                    Soy Henry Nogales Canoa, Mi pasión por la tecnología ha sido una de las principales motivaciones que me ha llevado a emprender mi propio proyecto, el cual se encuentra en crecimiento. A través de mi emprendimiento, busco aplicar las últimas innovaciones tecnológicas para ofrecer soluciones que respondan a las necesidades del mercado, especialmente en un entorno cada vez más digitalizado y orientado al uso de nuevas tecnologías.
+                </p>
+                <div class="timeline">
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-date">2018</div>
+                        <div class="timeline-content">Diseñador de Modas, Fotógrafo.</div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-content">Técnico en Sistemas Informáticos.</div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">Ingeniería de Sistemas.</div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">Ciberseguridad (Online).</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resumen" class="section">
+            <h2 class="section-title">Resumen</h2>
+            <p class="section-description">Técnico en Sistemas Informáticos y estudiante de último año de Ingeniería de Sistemas con conocimientos básicos en arreglo y mantenimiento de computadoras, actualmente iniciando estudios en Ciberseguridad. Apasionado por la tecnología y con un enfoque en el desarrollo de sistemas y la ciberseguridad. Experiencia básica en el desarrollo de proyectos personales.</p>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>Desarrollo Web</h3>
+                    <p>Experiencia básica en HTML, CSS, JavaScript y frameworks modernos como React y Angular, Laravel. Desarrollo de aplicaciones web interactivas y optimizadas.</p>
+                </div>
+                <div class="skill">
+                    <h3>Proyecto en Desarrollo</h3>
+                    <p>En proceso de desarrollo de un sistema web para la gestión de documentos y correspondencia en el instituto INSCO Oruro, donde se mejorará el flujo y la accesibilidad de información dentro la institución.</p>
+                </div>
+                <div class="skill">
+                    <h3>Proyecto Desarrollado</h3>
+                    <p>Desarrollo de un sistema de control de registro de empleados en PHP que facilita la organización de datos laborales en una pequeña empresa.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="curriculo" class="section">
+            <h2 class="section-title">Currículum Vitae</h2>
+            <p class="section-description">Mi experiencia profesional y habilidades clave.</p>
+            <div class="cv-content">
+                <div class="cv-column">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li><strong>Nombre:</strong> Henry Nogales Canoa</li>
+                        <li><strong>Email:</strong> hnc.4788@gmail.com</li>
+                        <li><strong>Teléfono:</strong> 7254557</li>
+                        <li><strong>Dirección:</strong> Av. Heroínas y Oquendo, Cochabamba, Bolivia</li>
+                    </ul>
+                </div>
+                <div class="cv-column">
+                    <h3>Experiencia Profesional</h3>
+                    <p><strong>Desarrollador Junior</strong> - Compañía KyM (2024 - Presente)</p>
+                    <p>Desarrollé un sistema de ventas en línea moderno y optimizado para mi emprendimiento.</p>
+                    <h3>Habilidades</h3>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React, Angular, Laravel</li>
+                        <li>Diseño Responsive</li>
+                        <li>Scrum y XP</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="evidencias" class="section">
+            <h2 class="section-title">Evidencias Académicas</h2>
+            <p class="section-description">Algunos de mis logros académicos destacados.</p>
+            <div class="evidencias-gallery">
+                <div class="evidencia-item">
+                    <img src="/img/hacking-etico.png" alt="Diploma 1" class="gallery-img" data-index="0">
+                    <p>Certificado, Taller de Hacking Etico, 2024</p>
+                </div>
+                <div class="evidencia-item">
+                    <img src="/img/venta1.png" alt="Proyecto 1" class="gallery-img" data-index="1">
+                    <p>Proyecto de Aplicación Web: Sistema de Venta-Online</p>
+                </div>
+                <div class="evidencia-item">
+                    <img src="img/certificado1.jpg" alt="Certificado 1" class="gallery-img" data-index="2">
+                    <p>Certificado de Participación en Hackathon</p>
+                </div>
+            </div>
+        
+            <!-- Modal para mostrar la imagen en tamaño completo -->
+            <div id="modal" class="modal">
+                <span class="close">&times;</span>
+                <div class="modal-content">
+                    <img id="modal-img" src="" alt="">
+                    <div id="modal-description"></div>
+                </div>
+                <div class="modal-controls">
+                    <button id="prev-btn" class="modal-btn">❮</button>
+                    <button id="next-btn" class="modal-btn">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificados" class="section">
+            <h2 class="section-title">Certificados y Reconocimientos</h2>
+            <p class="section-description">Mis logros académicos y profesionales.</p>
+            <div class="certificados-slider-container">
+                <button class="slider-btn prev-btn">&#10094;</button>
+                <div class="certificados-slider">
+                    <div class="certificado-item">
+                        <img src="img/certificado1.jpg" alt="Certificado 1" class="certificado-img">
+                        <p>Certificado en Desarrollo Web Full Stack - [Institución]</p>
+                    </div>
+                    <div class="certificado-item">
+                        <img src="img/certificado2.jpg" alt="Certificado 2" class="certificado-img">
+                        <p>Certificado en Ciberseguridad - [Institución]</p>
+                    </div>
+                    <div class="certificado-item">
+                        <img src="img/certificado3.jpg" alt="Certificado 3" class="certificado-img">
+                        <p>Diploma de Excelencia en Ingeniería de Sistemas - [Universidad]</p>
+                    </div>
+                </div>
+                <button class="slider-btn next-btn">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="cartas" class="section">
+            <h2 class="section-title">Cartas de Recomendación</h2>
+            <p class="section-description">Cartas que respaldan mi desempeño profesional.</p>
+            <div class="cartas-slider-container">
+                <button class="slider-btn prev-btn">&#10094;</button>
+                <div class="cartas-slider">
+                    <div class="carta-item">
+                        <img src="img/carta1.jpg" alt="Carta de Recomendación 1" class="carta-img">
+                        <!-- <p>“[Nombre del Recomendador] destaca mis habilidades como desarrollador en proyectos de alto impacto.”</p>
+                        <p><em>- [Nombre del Recomendador], [Cargo], [Compañía]</em></p> -->
+                    </div>
+                    <div class="carta-item">
+                        <img src="img/carta2.jpg" alt="Carta de Recomendación 2" class="carta-img">
+                        <!-- <p>“Su capacidad para solucionar problemas complejos fue crucial para el éxito de nuestro equipo.”</p>
+                        <p><em>- [Nombre del Recomendador], [Cargo], [Compañía]</em></p> -->
+                    </div>
+                    <div class="carta-item">
+                        <img src="img/carta3.jpg" alt="Carta de Recomendación 3" class="carta-img">
+                        <!-- <p>“Es un profesional altamente competente y responsable, siempre aportando soluciones innovadoras.”</p>
+                        <p><em>- [Nombre del Recomendador], [Cargo], [Compañía]</em></p> -->
+                    </div>
+                </div>
+                <button class="slider-btn next-btn">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="afiliaciones" class="section">
+            <h2 class="section-title">Afiliaciones y Membresías Profesionales</h2>
+            <p class="section-description">Formo parte de diversas organizaciones que respaldan mi crecimiento profesional.</p>
+            <div class="afiliaciones-list">
+                <div class="afiliacion-item">
+                    <img src="img/logo1.png" alt="Afiliación 1" class="afiliacion-logo">
+                    <p>[Nombre de la Organización]</p>
+                </div>
+                <div class="afiliacion-item">
+                    <img src="img/logo2.png" alt="Afiliación 2" class="afiliacion-logo">
+                    <p>[Nombre de la Organización]</p>
+                </div>
+                <div class="afiliacion-item">
+                    <img src="img/logo3.png" alt="Afiliación 3" class="afiliacion-logo">
+                    <p>[Nombre de la Organización]</p>
+                </div>
+                <div class="afiliacion-item">
+                    <img src="img/logo4.png" alt="Afiliación 4" class="afiliacion-logo">
+                    <p>[Nombre de la Organización]</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto" class="section contact-section">
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-description">Puedes encontrarme a través de los siguientes medios:</p>
+        
+            <div class="contact-container">
+                <!-- Información de contacto en fila vertical -->
+                <div class="contact-info">
+                    <div class="contact-item animate-on-scroll">
+                        <i class="fab fa-whatsapp contact-icon"></i>
+                        <h3>Teléfono</h3>
+                        <p><a href="tel:+59112345678">+591 7254557</a></p>
+                    </div>
+                    <div class="contact-item animate-on-scroll">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <h3>Correo Electrónico</h3>
+                        <p><a href="mailto:correo@ejemplo.com">kikealadino02@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item animate-on-scroll">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <h3>Ubicación</h3>
+                        <p class="direccion">Cochabamba, Bolivia</p>
+                    </div>
+                    <div class="contact-item animate-on-scroll">
+                        <i class="fas fa-share-alt contact-icon"></i>
+                        <h3>Redes Sociales</h3>
+                        <p>
+                            <a href="#" target="_blank">LinkedIn</a> |
+                            <a href="https://github.com/kikealadinus" target="_blank">GitHub</a> |
+                            <a href="#" target="_blank">Twitter</a>
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- Mapa interactivo -->
+                <div class="contact-map animate-on-scroll">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093644!2d144.95373531547972!3d-37.81627944202154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577800d03bcdc24!2sCochabamba%2C+Bolivia!5e0!3m2!1sen!2sus!4v1638914012336!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+        
+    </main>
+
+    <a href="#portada" class="back-to-top" title="Volver arriba"><i class="fas fa-arrow-alt-circle-up"></i></a>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/autobiografia.js"></script>
+    <script src="/js/btnvolver.js"></script>
+    <script src="/js/evidencias.js"></script>
+    <script src="/js/carta-recomendacion.js"></script>
+    <script src="/js/afiliaciones.js"></script>
+    <script src="/js/carousel.js"></script>
+    <script src="/js/formulario.js"></script>
+    <script src="/js/animaciones.js"></script>
+
+    <!-- SwiperJS JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        // Función para manejar la visibilidad
+        const handleScrollAnimation = () => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+                if (isVisible) {
+                    element.classList.add('visible'); // Agrega la clase visible cuando aparece en pantalla
+                }
+            });
+        };
+    
+        // Escucha el evento de scroll y ejecuta la función
+        window.addEventListener('scroll', handleScrollAnimation);
+    
+        // Llama a la función inicialmente para elementos visibles sin hacer scroll
+        document.addEventListener('DOMContentLoaded', handleScrollAnimation);
+    </script>
+
+</body>
+
+</html>

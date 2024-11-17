@@ -1,0 +1,246 @@
+/* Estilos generales del formulario emergente */
+/* .contact-form-popup {
+    display: none; 
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+    width: 300px;
+    max-width: 100%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-form-popup.show {
+    display: block;
+    transform: translateY(0);
+} */
+
+/* Estilos del contenido del formulario */
+/* .form-popup-content {
+    color: white;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+.close-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+
+.close-btn:hover {
+    background-color: #c82333;
+}
+ */
+
+/* Estilos generales del formulario emergente */
+/* Estilos generales del formulario emergente */
+.contact-form-popup {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #9ffbe7; /* Fondo blanco para el modal */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999; /* Aseguramos que se quede encima de otros elementos */
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    max-height: 70vh; /* El formulario no debe ocupar más del 50% de la altura */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: opacity 0.3s ease-in-out;
+    overflow-y: auto; /* Si el contenido es más alto, se puede hacer scroll */
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+/* Para cuando se muestre */
+.contact-form-popup.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Estilos del contenido del formulario */
+.form-popup-content {
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Texto oscuro para mejorar la legibilidad */
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #007bff; /* Color azul para el título */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555; /* Color más suave para las etiquetas */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd; /* Borde suave */
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #333; /* Texto oscuro en los campos */
+    background-color: #f9f9f9; /* Fondo suave en los campos */
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff; /* Cambio de color del borde al hacer focus */
+    outline: none;
+    background-color: #fff; /* Fondo blanco al enfocarse */
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #218838; /* Color verde más oscuro al hacer hover */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #333;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #dc3545; /* Rojo al pasar el mouse */
+}
+
+/* Animaciones del formulario */
+.contact-form-popup .form-popup-content {
+    animation: slide-up 0.3s ease-out; /* Animación de entrada */
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media queries para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .contact-form-popup {
+        width: 80%; /* El formulario ocupará el 80% del ancho */
+        bottom: 20px;
+        right: 20px;
+        max-height: 60vh; /* El máximo de la altura aumenta un poco */
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 1.3em; /* Reducir el tamaño del título */
+    }
+
+    .btn-submit {
+        font-size: 1em; /* Reducir tamaño del botón */
+    }
+
+    .form-group {
+        margin-bottom: 12px; /* Reducir el espacio entre los campos */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-form-popup {
+        width: 90%; /* El formulario ocupará el 90% del ancho */
+        bottom: 10px;
+        right: 10px;
+        max-height: 70vh; /* El formulario puede ser un poco más alto */
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 1.1em; /* Reducir aún más el tamaño del título */
+    }
+
+    .btn-submit {
+        font-size: 0.9em; /* Reducir aún más el tamaño del botón */
+    }
+}
